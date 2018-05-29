@@ -16,5 +16,21 @@ namespace SajalVaiProject
         {
             InitializeComponent();
         }
+
+        private static HomePage obj;
+        public static HomePage get_object
+        {
+            get
+            {
+                if (obj == null)
+                    obj = new HomePage();
+                return obj;
+            }
+            set
+            {
+                obj = value;
+            }
+        }
+
     }
 }

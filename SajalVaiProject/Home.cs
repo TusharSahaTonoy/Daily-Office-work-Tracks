@@ -23,11 +23,11 @@ namespace SajalVaiProject
         public Home()
         {
             InitializeComponent();
-
             startup_operations();
+
             //----------pnl_display configuration -------
             pnl_display = new Panel();
-            Controls.Add(pnl_display);
+            
 
             pnl_display.Location = new System.Drawing.Point(216, 58);
             pnl_display.Size = new System.Drawing.Size(791, 483);
@@ -35,15 +35,32 @@ namespace SajalVaiProject
             
         }
 
+        private void Home_Load(object sender, EventArgs e)
+        {
+            Controls.Add(pnl_display);
+
+            pnl_display.Controls.Clear();
+            pnl_display.Controls.Add(HomePage.get_object);
+        }
         private static void startup_operations()
         {
-            sql.con.Open();
+            //get ready Database 
+            try
+            {
+                sql.con.Open();
 
-            sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Select * from Client_info";
-            sql.cmd.ExecuteNonQuery();
+                sql.cmd.Connection = sql.con;
+                //sql.cmd.CommandText = "Select * from Client_info";
+                //sql.cmd.ExecuteNonQuery();
 
-            sql.con.Close();
+                sql.con.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
         }
 
 
@@ -138,7 +155,7 @@ namespace SajalVaiProject
 
     public static class sql
     {
-        static string con_string = "Server=(LocalDB)\\MSSQLLocalDB; Database=" + Application.StartupPath + "\\SoftITDB.mdf;Integrated Security=True";
+        static string con_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ Application.StartupPath+@"\SoftITDB.mdf;Integrated Security=True";
 
         public static SqlConnection con = new SqlConnection(con_string);
         public static SqlCommand cmd = new SqlCommand();
