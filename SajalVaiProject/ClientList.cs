@@ -67,7 +67,8 @@ namespace SajalVaiProject
         //
         private void dgv_client_list_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            btn_client_delete.Font = btn_client_edit.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dgv_client_list.SelectedRows.Count.ToString();
+            btn_client_delete.Font = btn_client_edit.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btn_client_delete.Enabled = btn_client_edit.Enabled = true;
         }
 

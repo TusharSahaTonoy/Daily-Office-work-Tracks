@@ -242,7 +242,6 @@
         private System.Windows.Forms.Panel pnl_manu;
         private System.Windows.Forms.Panel pnl_winBar;
         private System.Windows.Forms.Button btn_select;
-        private System.Windows.Forms.Button btn_visit;
         private System.Windows.Forms.Button btn_order_list;
         private System.Windows.Forms.Button btn_addOrder;
         private System.Windows.Forms.Button btn_clientList;
@@ -250,5 +249,6 @@
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.Button btn_visit;
     }
 }

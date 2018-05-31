@@ -46,15 +46,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_v_address = new System.Windows.Forms.TextBox();
             this.tb_v_phone = new System.Windows.Forms.TextBox();
+            this.btn_v_cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_v_save
             // 
-            this.btn_v_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.btn_v_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.btn_v_save.FlatAppearance.BorderSize = 0;
             this.btn_v_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_v_save.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_v_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_v_save.Image")));
-            this.btn_v_save.Location = new System.Drawing.Point(619, 223);
+            this.btn_v_save.Location = new System.Drawing.Point(658, 186);
             this.btn_v_save.Name = "btn_v_save";
             this.btn_v_save.Size = new System.Drawing.Size(95, 36);
             this.btn_v_save.TabIndex = 0;
@@ -78,9 +80,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 20);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Company Name :";
+            this.label2.Text = "*Company Name :";
             // 
             // label3
             // 
@@ -198,6 +200,23 @@
             this.tb_v_phone.TabIndex = 4;
             this.tb_v_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_v_phone_KeyPress);
             // 
+            // btn_v_cancel
+            // 
+            this.btn_v_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
+            this.btn_v_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_v_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_v_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_v_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_v_cancel.Image")));
+            this.btn_v_cancel.Location = new System.Drawing.Point(658, 246);
+            this.btn_v_cancel.Name = "btn_v_cancel";
+            this.btn_v_cancel.Size = new System.Drawing.Size(95, 36);
+            this.btn_v_cancel.TabIndex = 0;
+            this.btn_v_cancel.Text = "Cancel";
+            this.btn_v_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_v_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_v_cancel.UseVisualStyleBackColor = false;
+            this.btn_v_cancel.Click += new System.EventHandler(this.btn_v_cancel_Click);
+            // 
             // AddVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -219,6 +238,7 @@
             this.Controls.Add(this.lbl_v_id);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_v_cancel);
             this.Controls.Add(this.btn_v_save);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -249,5 +269,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_v_address;
         private System.Windows.Forms.TextBox tb_v_phone;
+        private System.Windows.Forms.Button btn_v_cancel;
     }
 }

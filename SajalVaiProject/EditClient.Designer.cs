@@ -104,7 +104,7 @@
             // 
             // btn_c_save
             // 
-            this.btn_c_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(151)))), ((int)(((byte)(53)))));
+            this.btn_c_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.btn_c_save.FlatAppearance.BorderSize = 0;
             this.btn_c_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_c_save.ForeColor = System.Drawing.SystemColors.HighlightText;

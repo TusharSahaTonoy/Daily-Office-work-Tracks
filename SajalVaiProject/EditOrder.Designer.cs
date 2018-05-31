@@ -40,17 +40,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_c_name = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_o_id = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tb_advance = new System.Windows.Forms.TextBox();
-            this.tb_price = new System.Windows.Forms.TextBox();
+            this.tb_o_advance = new System.Windows.Forms.TextBox();
+            this.tb_o_price = new System.Windows.Forms.TextBox();
             this.tb_o_about = new System.Windows.Forms.TextBox();
             this.tb_o_type = new System.Windows.Forms.TextBox();
             this.tb_o_title = new System.Windows.Forms.TextBox();
             this.btn_o_save = new System.Windows.Forms.Button();
-            this.lbl_o_c_name = new System.Windows.Forms.Label();
             this.lbl_o_c_phone = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -181,24 +179,12 @@
             this.label3.TabIndex = 51;
             this.label3.Text = "*Order Title :";
             // 
-            // lbl_c_name
-            // 
-            this.lbl_c_name.AutoSize = true;
-            this.lbl_c_name.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbl_c_name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_c_name.Location = new System.Drawing.Point(527, 53);
-            this.lbl_c_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_c_name.Name = "lbl_c_name";
-            this.lbl_c_name.Size = new System.Drawing.Size(104, 20);
-            this.lbl_c_name.TabIndex = 50;
-            this.lbl_c_name.Text = "*Client Name :";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(527, 93);
+            this.label2.Location = new System.Drawing.Point(526, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
@@ -227,21 +213,21 @@
             this.label1.TabIndex = 46;
             this.label1.Text = "Order Id :";
             // 
-            // tb_advance
+            // tb_o_advance
             // 
-            this.tb_advance.Location = new System.Drawing.Point(154, 380);
-            this.tb_advance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tb_advance.Name = "tb_advance";
-            this.tb_advance.Size = new System.Drawing.Size(229, 27);
-            this.tb_advance.TabIndex = 45;
+            this.tb_o_advance.Location = new System.Drawing.Point(154, 380);
+            this.tb_o_advance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_o_advance.Name = "tb_o_advance";
+            this.tb_o_advance.Size = new System.Drawing.Size(229, 27);
+            this.tb_o_advance.TabIndex = 45;
             // 
-            // tb_price
+            // tb_o_price
             // 
-            this.tb_price.Location = new System.Drawing.Point(154, 335);
-            this.tb_price.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tb_price.Name = "tb_price";
-            this.tb_price.Size = new System.Drawing.Size(229, 27);
-            this.tb_price.TabIndex = 44;
+            this.tb_o_price.Location = new System.Drawing.Point(154, 335);
+            this.tb_o_price.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_o_price.Name = "tb_o_price";
+            this.tb_o_price.Size = new System.Drawing.Size(229, 27);
+            this.tb_o_price.TabIndex = 44;
             // 
             // tb_o_about
             // 
@@ -271,11 +257,11 @@
             // 
             // btn_o_save
             // 
-            this.btn_o_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_o_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.btn_o_save.FlatAppearance.BorderSize = 0;
             this.btn_o_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_o_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_o_save.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_o_save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_o_save.Location = new System.Drawing.Point(283, 431);
             this.btn_o_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_o_save.Name = "btn_o_save";
@@ -283,28 +269,17 @@
             this.btn_o_save.TabIndex = 40;
             this.btn_o_save.Text = "Save Order";
             this.btn_o_save.UseVisualStyleBackColor = false;
-            // 
-            // lbl_o_c_name
-            // 
-            this.lbl_o_c_name.AutoSize = true;
-            this.lbl_o_c_name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_o_c_name.Location = new System.Drawing.Point(638, 53);
-            this.lbl_o_c_name.Name = "lbl_o_c_name";
-            this.lbl_o_c_name.Size = new System.Drawing.Size(51, 20);
-            this.lbl_o_c_name.TabIndex = 65;
-            this.lbl_o_c_name.Text = "(Auto)";
-            this.lbl_o_c_name.Visible = false;
+            this.btn_o_save.Click += new System.EventHandler(this.btn_o_save_Click);
             // 
             // lbl_o_c_phone
             // 
             this.lbl_o_c_phone.AutoSize = true;
             this.lbl_o_c_phone.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_o_c_phone.Location = new System.Drawing.Point(638, 93);
+            this.lbl_o_c_phone.Location = new System.Drawing.Point(637, 51);
             this.lbl_o_c_phone.Name = "lbl_o_c_phone";
             this.lbl_o_c_phone.Size = new System.Drawing.Size(51, 20);
             this.lbl_o_c_phone.TabIndex = 65;
             this.lbl_o_c_phone.Text = "(Auto)";
-            this.lbl_o_c_phone.Visible = false;
             // 
             // EditOrder
             // 
@@ -312,7 +287,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Controls.Add(this.lbl_o_c_phone);
-            this.Controls.Add(this.lbl_o_c_name);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dtp_o_delivery);
@@ -324,12 +298,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lbl_c_name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_o_id);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_advance);
-            this.Controls.Add(this.tb_price);
+            this.Controls.Add(this.tb_o_advance);
+            this.Controls.Add(this.tb_o_price);
             this.Controls.Add(this.tb_o_about);
             this.Controls.Add(this.tb_o_type);
             this.Controls.Add(this.tb_o_title);
@@ -348,8 +321,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dtp_o_delivery;
-        private System.Windows.Forms.DateTimePicker dtp_o_date;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -357,17 +328,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_c_name;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl_o_id;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_advance;
-        private System.Windows.Forms.TextBox tb_price;
-        private System.Windows.Forms.TextBox tb_o_about;
-        private System.Windows.Forms.TextBox tb_o_type;
-        private System.Windows.Forms.TextBox tb_o_title;
         private System.Windows.Forms.Button btn_o_save;
-        private System.Windows.Forms.Label lbl_o_c_name;
-        private System.Windows.Forms.Label lbl_o_c_phone;
+        internal System.Windows.Forms.Label lbl_o_id;
+        internal System.Windows.Forms.DateTimePicker dtp_o_delivery;
+        internal System.Windows.Forms.DateTimePicker dtp_o_date;
+        internal System.Windows.Forms.TextBox tb_o_advance;
+        internal System.Windows.Forms.TextBox tb_o_price;
+        internal System.Windows.Forms.TextBox tb_o_about;
+        internal System.Windows.Forms.TextBox tb_o_type;
+        internal System.Windows.Forms.TextBox tb_o_title;
+        internal System.Windows.Forms.Label lbl_o_c_phone;
     }
 }

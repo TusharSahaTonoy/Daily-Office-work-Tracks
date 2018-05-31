@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SajalVaiProject
@@ -28,6 +21,42 @@ namespace SajalVaiProject
 
                 return edit_order;
             }
+        }
+
+        private void btn_o_save_Click(object sender, EventArgs e)
+        {
+            //validation check
+            
+            if (tb_o_price.Text == "")
+                tb_o_price.Text = "0";
+            if (tb_o_advance.Text == "")
+                tb_o_advance.Text = "0";
+
+            //Edit opration ---------------
+            if (tb_o_title.Text != "")
+            {
+                string filepath = AddOrder.save_description_txt(lbl_o_id.Text, tb_o_about.Text);
+                sql.con.Open();
+
+                //sql.cmd.Connection = sql.con;
+                sql.cmd.CommandText = "Update Order_info set o_title='" + tb_o_title.Text + "',o_type='" + tb_o_type.Text + "',o_about='" + filepath + "',o_date='" + dtp_o_date.Text + "',o_delivery='" + dtp_o_delivery.Text + "',o_price='" + tb_o_price.Text + "',o_advance='" + tb_o_advance.Text + "' where o_id='" + lbl_o_id.Text + "'";
+
+                int n = sql.cmd.ExecuteNonQuery();
+
+                sql.con.Close();
+
+                if (n != 0)
+                {
+                    MessageBox.Show("Order edited");
+                    OrderList.get_order_list = null;
+                }
+                else
+                {
+                    MessageBox.Show("Something wrong,Try again");
+                }
+            }
+            else
+                MessageBox.Show("Title is required");
         }
     }
 

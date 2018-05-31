@@ -24,7 +24,7 @@ namespace SajalVaiProject
         {
             get
             {
-                if(a_o_i==null)
+                if (a_o_i == null)
                     a_o_i = new AddOrder();
                 return a_o_i;
             }
@@ -75,27 +75,43 @@ namespace SajalVaiProject
             cb_c_name.SelectedIndex = cb_c_phone.SelectedIndex;
         }
 
-        
-        //save opetation
-        string save_description_txt(string order_id, string description)
+        //Save order description
+        public static string save_description_txt(string order_id, string description)
         {
-            string filePath = Application.StartupPath + "\\Order description";
-            if (!Directory.Exists(filePath))
-                Directory.CreateDirectory(filePath);
+            string filePath = System.Windows.Forms.Application.StartupPath + "\\Order description";
+            if (!System.IO.Directory.Exists(filePath))
+                System.IO.Directory.CreateDirectory(filePath);
 
             string fileName = filePath + "\\" + order_id + ".txt";
 
-            using (StreamWriter sw = new StreamWriter(fileName))
+            using (System.IO.StreamWriter sw = new System.IO.StreamWriter(fileName))
             {
                 sw.WriteAsync(description);
             }
             return fileName;
         }
 
+        //add Order
+        int add_order()
+        {
+            string filePath = save_description_txt(lbl_o_id.Text, tb_o_about.Text);
+
+            sql.con.Open();
+
+            //sql.cmd.Connection = sql.con;
+            sql.cmd.CommandText = "Insert into Order_info values ('" + lbl_o_id.Text + "','" + cb_c_phone.Text + "','" + tb_o_title.Text + "','" + tb_o_type.Text + "','" + filePath + "','" + dtp_o_date.Text + "','" + dtp_o_delivery.Text + "','" + tb_price.Text + "','" + tb_advance.Text + "')";
+
+            int n = sql.cmd.ExecuteNonQuery();
+
+            sql.con.Close();
+
+            return n;
+        }
+
         //Validation Check
         private void btn_o_save_Click(object sender, EventArgs e)
         {
-            bool allOk=false;
+            bool allOk = false;
 
             if (tb_o_title.Text == "")
             {
@@ -113,19 +129,32 @@ namespace SajalVaiProject
             else
                 allOk = true;
 
-            if(tb_price.Text=="")
+            if (tb_price.Text == "")
                 tb_price.Text = "0";
             if (tb_advance.Text == "")
                 tb_advance.Text = "0";
 
             if (allOk)
             {
-                add_order();
+                if (add_order() != 0)
+                {
+                    MessageBox.Show("Order Saved");
+                    //Reset All controls
+                    generate_orderid();
+                    OrderList.get_order_list = null;
+
+                    tb_o_title.Text = tb_o_type.Text = tb_o_about.Text = tb_price.Text = tb_advance.Text = "";
+                    cb_c_phone.SelectedIndex = cb_c_name.SelectedIndex = -1;
+                }
+                else
+                    MessageBox.Show("Somethig wrong, Try again");
+
+
             }
 
         }
 
-        
+
 
         private void tb_price_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -143,31 +172,6 @@ namespace SajalVaiProject
             }
         }
 
-        //Add order 
-        void add_order()
-        {
-            string filePath = save_description_txt(lbl_o_id.Text, tb_o_about.Text);
 
-            sql.con.Open();
-
-            //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Insert into Order_info values ('" + lbl_o_id.Text + "','" + cb_c_phone.Text + "','" + tb_o_title.Text + "','" + tb_o_type.Text + "','" + filePath + "','" + dtp_o_date.Text + "','" + dtp_o_delivery.Text + "','" + tb_price.Text + "','" + tb_advance.Text + "')";
-
-            int n = sql.cmd.ExecuteNonQuery();
-
-            sql.con.Close();
-
-            if (n != 0)
-                MessageBox.Show("Order Added");
-            else
-                MessageBox.Show("Something Wrong");
-
-            generate_orderid();
-            OrderList.get_order_list = null;
-
-            //Reset All controls
-            tb_o_title.Text = tb_o_type.Text = tb_o_about.Text = tb_price.Text = tb_advance.Text = "";
-            cb_c_phone.SelectedIndex = cb_c_name.SelectedIndex = -1;
-        }
     }
 }

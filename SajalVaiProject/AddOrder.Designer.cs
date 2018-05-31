@@ -207,11 +207,11 @@
             // 
             // btn_o_save
             // 
-            this.btn_o_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.btn_o_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
             this.btn_o_save.FlatAppearance.BorderSize = 0;
             this.btn_o_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_o_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_o_save.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_o_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_o_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_o_save.Image")));
             this.btn_o_save.Location = new System.Drawing.Point(274, 431);
             this.btn_o_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

@@ -39,6 +39,7 @@
             this.o_delivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.o_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.o_advance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_o_edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order_list)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.o_delivery,
             this.o_price,
             this.o_advance});
-            this.dgv_order_list.Location = new System.Drawing.Point(12, 113);
+            this.dgv_order_list.Location = new System.Drawing.Point(3, 56);
             this.dgv_order_list.Name = "dgv_order_list";
             this.dgv_order_list.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -68,9 +69,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_order_list.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_order_list.Size = new System.Drawing.Size(769, 355);
+            this.dgv_order_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_order_list.Size = new System.Drawing.Size(785, 355);
             this.dgv_order_list.TabIndex = 0;
             this.dgv_order_list.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_order_list_CellClick);
+            this.dgv_order_list.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_order_list_CellMouseDoubleClick);
             // 
             // o_id
             // 
@@ -112,7 +115,7 @@
             // 
             // o_date
             // 
-            this.o_date.HeaderText = "Order Data";
+            this.o_date.HeaderText = "Order Date";
             this.o_date.Name = "o_date";
             this.o_date.ReadOnly = true;
             this.o_date.Width = 108;
@@ -138,11 +141,27 @@
             this.o_advance.ReadOnly = true;
             this.o_advance.Width = 132;
             // 
+            // btn_o_edit
+            // 
+            this.btn_o_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
+            this.btn_o_edit.Enabled = false;
+            this.btn_o_edit.FlatAppearance.BorderSize = 0;
+            this.btn_o_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_o_edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_o_edit.Location = new System.Drawing.Point(351, 427);
+            this.btn_o_edit.Name = "btn_o_edit";
+            this.btn_o_edit.Size = new System.Drawing.Size(75, 29);
+            this.btn_o_edit.TabIndex = 1;
+            this.btn_o_edit.Text = "Edit";
+            this.btn_o_edit.UseVisualStyleBackColor = false;
+            this.btn_o_edit.Click += new System.EventHandler(this.btn_o_edit_Click);
+            // 
             // OrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.btn_o_edit);
             this.Controls.Add(this.dgv_order_list);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -156,6 +175,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_order_list;
+        private System.Windows.Forms.Button btn_o_edit;
         private System.Windows.Forms.DataGridViewTextBoxColumn o_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn o_c_phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn o_title;

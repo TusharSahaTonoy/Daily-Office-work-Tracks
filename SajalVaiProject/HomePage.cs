@@ -32,5 +32,18 @@ namespace SajalVaiProject
             }
         }
 
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        void load_()
+        {
+            sql.con.Open();
+
+
+
+            sql.con.Close();
+        }
     }
 }

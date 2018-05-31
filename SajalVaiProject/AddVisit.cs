@@ -36,7 +36,7 @@ namespace SajalVaiProject
 
             //sql.cmd.Connection = sql.con;
             sql.cmd.CommandText = "Select count(v_id) from Visit_info";
-            lbl_v_id.Text= Convert.ToString(Convert.ToInt32(sql.cmd.ExecuteScalar())+1);
+            lbl_v_id.Text = Convert.ToString(Convert.ToInt32(sql.cmd.ExecuteScalar()) + 1);
 
             sql.con.Close();
         }
@@ -60,29 +60,52 @@ namespace SajalVaiProject
             return filepath;
         }
 
-        //
-        private void btn_v_save_Click(object sender, EventArgs e)
+        int save_visit_record()
         {
-            string rspnsFP = save_response(lbl_v_id.Text,tb_v_response.Text);
+            string rspnsFP = save_response(lbl_v_id.Text, tb_v_response.Text);
+            int n = 0;
 
             sql.con.Open();
 
-            sql.cmd.CommandText = "Insert into Visit_info values('"+lbl_v_id.Text+"','"+tb_v_company.Text+"','"+tb_v_address.Text+"','"+tb_v_phone.Text+"','"+dtp_v_date.Text+"','"+tb_v_type.Text+"','"+tb_v_visitor.Text+"','"+ rspnsFP + "')";
+            sql.cmd.CommandText = "Insert into Visit_info values('" + lbl_v_id.Text + "','" + tb_v_company.Text + "','" + tb_v_address.Text + "','" + tb_v_phone.Text + "','" + dtp_v_date.Text + "','" + tb_v_type.Text + "','" + tb_v_visitor.Text + "','" + rspnsFP + "')";
 
-            int n =sql.cmd.ExecuteNonQuery();
+            n = sql.cmd.ExecuteNonQuery();
 
             sql.con.Close();
 
-            if (n != 0)
-                MessageBox.Show("Visit record save");
+            return n;
+
+        }
+        //
+        private void btn_v_save_Click(object sender, EventArgs e)
+        {
+            int n = 0;
+
+            if(tb_v_company.Text!="")
+            {
+                n = save_visit_record();
+
+                if (n != 0)
+                {
+                    MessageBox.Show("Visit record save");
+                    tb_v_company.Text = tb_v_address.Text = tb_v_phone.Text = tb_v_type.Text = tb_v_visitor.Text = tb_v_response.Text = "";
+
+                    generate_count();
+                    VisitList.get_v_list = null;
+                }
+                else
+                    MessageBox.Show("Somethig wrong");
+            }
             else
-                MessageBox.Show("Something Wrong");
+                MessageBox.Show("Star(*) field is required");
 
-            tb_v_company.Text = tb_v_address.Text= tb_v_phone.Text = tb_v_type.Text = tb_v_visitor.Text = tb_v_response.Text = "";
-
-            generate_count();
-            VisitList.get_v_list = null;
             
+        }
+
+        private void btn_v_cancel_Click(object sender, EventArgs e)
+        {
+            Home.pnl_display.Controls.Clear();
+            Home.pnl_display.Controls.Add(VisitList.get_v_list);
         }
 
         private void tb_v_phone_KeyPress(object sender, KeyPressEventArgs e)
@@ -92,5 +115,7 @@ namespace SajalVaiProject
                 e.Handled = true;
             }
         }
+
+
     }
 }
