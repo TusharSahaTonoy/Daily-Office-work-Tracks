@@ -43,3 +43,10 @@ F:\Programs\Visual Studio\C#\Application\SajalVaiProject\SajalVaiProject\obj\Rel
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\SajalVaiProject\obj\Release\SajalVaiProject.AddVisit.resources
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\SajalVaiProject\obj\Release\SajalVaiProject.VisitList.resources
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\SajalVaiProject\obj\Release\SajalVaiProject.csproj.GenerateResource.Cache
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\System.Data.SqlServerCe.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.SqlServer.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.SqlServerCompact.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.xml
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.SqlServer.xml
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Release\EntityFramework.SqlServerCompact.xml

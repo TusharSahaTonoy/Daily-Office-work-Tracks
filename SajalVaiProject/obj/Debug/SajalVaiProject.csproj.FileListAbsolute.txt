@@ -43,3 +43,7 @@ F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Track
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\obj\Debug\SajalVaiProject.AddVisit.resources
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\obj\Debug\SajalVaiProject.VisitList.resources
 F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\obj\Debug\SajalVaiProject.csproj.GenerateResource.Cache
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Debug\System.Data.SQLite.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Debug\System.Data.SQLite.EF6.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Debug\System.Data.SQLite.Linq.dll
+F:\Programs\Visual Studio\C#\Application\SajalVaiProject\Daily-Office-work-Tracks\SajalVaiProject\bin\Debug\System.Data.SQLite.xml

@@ -42,14 +42,14 @@ namespace SajalVaiProject
         List<string> paths = new List<string>();
         void get_list_order()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
-            //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Select o_id as 'Order Id', o_c_phone as 'Client Phone', o_title as 'Title',o_type as 'Type',o_about as 'Description',o_date as 'Order Date',o_delivery as 'Delivery Date',o_price as 'Price',o_advance as 'Advance Paid' from Order_info";
-            sql.reader = sql.cmd.ExecuteReader();
+            //sqlite.cmd.Connection = sqlite.con;
+            sqlite.cmd.CommandText = "Select o_id as 'Order Id', o_c_phone as 'Client Phone', o_title as 'Title',o_type as 'Type',o_about as 'Description',o_date as 'Order Date',o_delivery as 'Delivery Date',o_price as 'Price',o_advance as 'Advance Paid' from Order_info";
+            sqlite.reader = sqlite.cmd.ExecuteReader();
 
             DataTable dtable = new DataTable();
-            dtable.Load(sql.reader);
+            dtable.Load(sqlite.reader);
 
             int n = 0;
             while (dtable.Rows.Count != n)
@@ -60,7 +60,7 @@ namespace SajalVaiProject
                 n++;
             }
             
-            sql.con.Close();
+            sqlite.con.Close();
         }
 
         private void dgv_order_list_CellClick(object sender, DataGridViewCellEventArgs e)

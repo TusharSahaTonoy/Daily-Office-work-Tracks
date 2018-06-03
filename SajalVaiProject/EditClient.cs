@@ -32,17 +32,17 @@ namespace SajalVaiProject
 
         private void btn_c_save_Click(object sender, EventArgs e)
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
             //
-            sql.cmd.CommandText = "update Client_info "+
+            sqlite.cmd.CommandText = "update Client_info "+
                 "set c_name='" + tb_c_name.Text + "',c_email='" + tb_c_email.Text+"',"+
                 "c_company='" + tb_c_company.Text + "',c_address='" + tb_c_address.Text + "',"+
                 "c_tel='" + tb_c_tel.Text +"' where c_phone='"+tb_c_phone.Text+"'";
 
-            int a=sql.cmd.ExecuteNonQuery();
+            int a=sqlite.cmd.ExecuteNonQuery();
 
-            sql.con.Close();
+            sqlite.con.Close();
             if(a!=0)
                 MessageBox.Show("Client edited");
             else

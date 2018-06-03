@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Data.SQLite;
 
 namespace SajalVaiProject
 {
@@ -23,7 +24,7 @@ namespace SajalVaiProject
         public Home()
         {
             InitializeComponent();
-            startup_operations();
+            
 
             //----------pnl_display configuration -------
             pnl_display = new Panel();
@@ -39,28 +40,43 @@ namespace SajalVaiProject
         {
             Controls.Add(pnl_display);
 
+            startup_operations();
+
             pnl_display.Controls.Clear();
             pnl_display.Controls.Add(HomePage.get_object);
         }
         private static void startup_operations()
         {
             //get ready Database 
+            //try
+            //{
+            //    sql.con.Open();
+
+            //    sql.cmd.Connection = sql.con;
+            //    //sql.cmd.CommandText = "Select * from Client_info";
+            //    //sql.cmd.ExecuteNonQuery();
+
+            //    sql.con.Close();
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
             try
             {
-                sql.con.Open();
+                sqlite.con.Open();
 
-                sql.cmd.Connection = sql.con;
                 //sql.cmd.CommandText = "Select * from Client_info";
                 //sql.cmd.ExecuteNonQuery();
 
-                sql.con.Close();
+                sqlite.con.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            
         }
 
 
@@ -153,16 +169,27 @@ namespace SajalVaiProject
         
     }
 
-    public static class sql
-    {
-        static string con_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ Application.StartupPath+@"\SoftITDB.mdf;Integrated Security=True";
+    //public static class sql
+    //{
+    //    static string con_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ Application.StartupPath+@"\SoftITDB.mdf;Integrated Security=True";
 
-        public static SqlConnection con = new SqlConnection(con_string);
-        public static SqlCommand cmd = new SqlCommand();
-        public static SqlDataReader reader;
+    //    public static SqlConnection con = new SqlConnection(con_string);
+    //    public static SqlCommand cmd = new SqlCommand();
+    //    public static SqlDataReader reader;
+
+    //}
+
+    public static class sqlite
+    {
+        static string con_string = "Data Source = SoftIt.db; Version=3;New=False;Compress=True;";
+        public static SQLiteConnection con= new SQLiteConnection(con_string);
+        public static SQLiteCommand cmd = con.CreateCommand();
+        public static SQLiteDataReader reader;
+        public static SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+        public static DataSet dset = new DataSet();
+        public static DataTable dtable = new DataTable();
 
     }
-
     
 
     public static class Validator

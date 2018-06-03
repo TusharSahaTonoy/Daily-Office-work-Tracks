@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SajalVaiProject
 {
     public partial class ClientList : UserControl
     {
-        
+
         public ClientList()
         {
             InitializeComponent();
@@ -21,13 +22,13 @@ namespace SajalVaiProject
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dgv_client_list.DefaultCellStyle = dataGridViewCellStyle3;
-            
+
             btn_client_delete.Enabled = btn_client_edit.Enabled = false;
-            
+
             //load operations
             show_client_list();
 
-            
+
         }
 
         private static ClientList obj;
@@ -36,7 +37,7 @@ namespace SajalVaiProject
         {
             get
             {
-                if(obj==null)
+                if (obj == null)
                     obj = new ClientList();
                 return obj;
             }
@@ -48,21 +49,30 @@ namespace SajalVaiProject
         //show list method
         private void show_client_list()
         {
-            sql.con.Open();
-            string command = "Select c_name as 'Client Name',c_phone as 'Phone No',c_email as 'Email'," + 
-                "c_company as 'Company Name',c_address as 'Company Address'," +
-                "c_tel as 'Telephone' from Client_info";
+            string command = "Select c_name as 'Client Name',c_phone as 'Phone No',c_email as 'Email'," +
+    "c_company as 'Company Name',c_address as 'Company Address'," +
+    "c_tel as 'Telephone' from Client_info";
 
-            
-            sql.cmd.CommandText = command;
-            sql.reader = sql.cmd.ExecuteReader();
+            //sql.con.Open();
 
-            DataTable dtable = new DataTable();
-            dtable.Load(sql.reader);
+            //sql.cmd.CommandText = command;
+            //sql.reader = sql.cmd.ExecuteReader();
 
-            dgv_client_list.DataSource = dtable;
+            //DataTable dtable = new DataTable();
+            //dtable.Load(sql.reader);
 
-            sql.con.Close();
+            //dgv_client_list.DataSource = dtable;
+
+            //sql.con.Close();
+
+            sqlite.con.Open();
+
+            sqlite.adapter = new System.Data.SQLite.SQLiteDataAdapter(command, sqlite.con);
+            sqlite.adapter.Fill(sqlite.dset);
+
+            dgv_client_list.DataSource = sqlite.dset.Tables[0];
+
+            sqlite.con.Close();
         }
         //
         private void dgv_client_list_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -101,7 +111,7 @@ namespace SajalVaiProject
             //{
             //    sql.con.Open();
 
-                
+
             //    sql.cmd.CommandText = "Delete from Client_info where c_phone='" + dgv_client_list.SelectedRows[0].Cells[1].Value.ToString() + "'";
 
             //    int a = sql.cmd.ExecuteNonQuery();

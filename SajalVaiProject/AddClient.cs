@@ -86,13 +86,13 @@ namespace SajalVaiProject
         //---------------add client---------
         private void add_client()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
             
-            sql.cmd.CommandText = "Insert into Client_info(c_name,c_phone,c_email,c_company,c_address,c_tel) values('"+tb_c_name.Text+"','"+tb_c_phone.Text+"','"+tb_c_email.Text+"','"+tb_c_company.Text+"','"+tb_c_address.Text+"','"+tb_c_tel.Text+"')";
-            sql.cmd.ExecuteNonQuery();
+            sqlite.cmd.CommandText = "Insert into Client_info(c_name,c_phone,c_email,c_company,c_address,c_tel) values('"+tb_c_name.Text+"','"+tb_c_phone.Text+"','"+tb_c_email.Text+"','"+tb_c_company.Text+"','"+tb_c_address.Text+"','"+tb_c_tel.Text+"')";
+            sqlite.cmd.ExecuteNonQuery();
 
-            sql.con.Close();
+            sqlite.con.Close();
 
             MessageBox.Show("Client Added");
 

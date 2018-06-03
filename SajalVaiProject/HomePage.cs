@@ -39,11 +39,11 @@ namespace SajalVaiProject
 
         void load_()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
 
 
-            sql.con.Close();
+            sqlite.con.Close();
         }
     }
 }

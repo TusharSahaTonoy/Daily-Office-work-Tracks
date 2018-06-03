@@ -38,17 +38,17 @@ namespace SajalVaiProject
         //load dgv with visit list
         void load_dgv_v_list()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
             //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "select * from Visit_info";
-            sql.reader= sql.cmd.ExecuteReader();
+            sqlite.cmd.CommandText = "select * from Visit_info";
+            sqlite.reader= sqlite.cmd.ExecuteReader();
 
             
 
             DataTable table = new DataTable();
-            table.Load(sql.reader);
-            sql.con.Close();
+            table.Load(sqlite.reader);
+            sqlite.con.Close();
 
             int n = 0;
             while(table.Rows.Count!=n)

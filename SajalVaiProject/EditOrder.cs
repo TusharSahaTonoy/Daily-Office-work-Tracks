@@ -36,14 +36,14 @@ namespace SajalVaiProject
             if (tb_o_title.Text != "")
             {
                 string filepath = AddOrder.save_description_txt(lbl_o_id.Text, tb_o_about.Text);
-                sql.con.Open();
+                sqlite.con.Open();
 
                 //sql.cmd.Connection = sql.con;
-                sql.cmd.CommandText = "Update Order_info set o_title='" + tb_o_title.Text + "',o_type='" + tb_o_type.Text + "',o_about='" + filepath + "',o_date='" + dtp_o_date.Text + "',o_delivery='" + dtp_o_delivery.Text + "',o_price='" + tb_o_price.Text + "',o_advance='" + tb_o_advance.Text + "' where o_id='" + lbl_o_id.Text + "'";
+                sqlite.cmd.CommandText = "Update Order_info set o_title='" + tb_o_title.Text + "',o_type='" + tb_o_type.Text + "',o_about='" + filepath + "',o_date='" + dtp_o_date.Text + "',o_delivery='" + dtp_o_delivery.Text + "',o_price='" + tb_o_price.Text + "',o_advance='" + tb_o_advance.Text + "' where o_id='" + lbl_o_id.Text + "'";
 
-                int n = sql.cmd.ExecuteNonQuery();
+                int n = sqlite.cmd.ExecuteNonQuery();
 
-                sql.con.Close();
+                sqlite.con.Close();
 
                 if (n != 0)
                 {

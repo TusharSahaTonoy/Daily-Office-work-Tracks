@@ -15,8 +15,9 @@ namespace SajalVaiProject
         public AddOrder()
         {
             InitializeComponent();
-            generate_c_phone();
+            
             generate_orderid();
+            generate_c_phone();
         }
 
         static AddOrder a_o_i;
@@ -36,32 +37,41 @@ namespace SajalVaiProject
 
         private void generate_c_phone()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
             //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "select c_name,c_phone from Client_info";
-            sql.reader = sql.cmd.ExecuteReader();
+            sqlite.cmd.CommandText = "select c_name,c_phone from Client_info";
+            sqlite.reader = sqlite.cmd.ExecuteReader();
 
-            while (sql.reader.Read())
+            while (sqlite.reader.Read())
             {
-                cb_c_name.Items.Add(sql.reader.GetString(0));
-                cb_c_phone.Items.Add(sql.reader.GetString(1));
+                cb_c_name.Items.Add(sqlite.reader.GetString(0));
+                cb_c_phone.Items.Add(sqlite.reader.GetString(1));
             }
+            sqlite.reader.Close();
+            sqlite.con.Close();
 
-            sql.con.Close();
         }
 
         private void generate_orderid()
         {
-            sql.con.Open();
+            //sql.con.Open();
 
-            //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Select count(o_id) from Order_info";
+            ////sql.cmd.Connection = sql.con;
+            //sql.cmd.CommandText = "Select count(o_id) from Order_info";
 
-            int count = Convert.ToInt32(sql.cmd.ExecuteScalar()) + 1;
+            //int count = Convert.ToInt32(sql.cmd.ExecuteScalar()) + 1;
+            //lbl_o_id.Text = "o_" + count.ToString();
+
+            //sql.con.Close();
+
+            sqlite.con.Open();
+
+            sqlite.cmd.CommandText = "Select count(o_id) from Order_info";
+            int count = Convert.ToInt32(sqlite.cmd.ExecuteScalar()) + 1;
             lbl_o_id.Text = "o_" + count.ToString();
 
-            sql.con.Close();
+            sqlite.con.Close();
         }
 
 
@@ -96,14 +106,14 @@ namespace SajalVaiProject
         {
             string filePath = save_description_txt(lbl_o_id.Text, tb_o_about.Text);
 
-            sql.con.Open();
+            sqlite.con.Open();
 
             //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Insert into Order_info values ('" + lbl_o_id.Text + "','" + cb_c_phone.Text + "','" + tb_o_title.Text + "','" + tb_o_type.Text + "','" + filePath + "','" + dtp_o_date.Text + "','" + dtp_o_delivery.Text + "','" + tb_price.Text + "','" + tb_advance.Text + "')";
+            sqlite.cmd.CommandText = "Insert into Order_info values ('" + lbl_o_id.Text + "','" + cb_c_phone.Text + "','" + tb_o_title.Text + "','" + tb_o_type.Text + "','" + filePath + "','" + dtp_o_date.Text + "','" + dtp_o_delivery.Text + "','" + tb_price.Text + "','" + tb_advance.Text + "')";
 
-            int n = sql.cmd.ExecuteNonQuery();
+            int n = sqlite.cmd.ExecuteNonQuery();
 
-            sql.con.Close();
+            sqlite.con.Close();
 
             return n;
         }

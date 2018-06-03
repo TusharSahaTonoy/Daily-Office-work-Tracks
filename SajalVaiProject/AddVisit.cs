@@ -32,13 +32,13 @@ namespace SajalVaiProject
         //generate visit count
         private void generate_count()
         {
-            sql.con.Open();
+            sqlite.con.Open();
 
             //sql.cmd.Connection = sql.con;
-            sql.cmd.CommandText = "Select count(v_id) from Visit_info";
-            lbl_v_id.Text = Convert.ToString(Convert.ToInt32(sql.cmd.ExecuteScalar()) + 1);
+            sqlite.cmd.CommandText = "Select count(v_id) from Visit_info";
+            lbl_v_id.Text = Convert.ToString(Convert.ToInt32(sqlite.cmd.ExecuteScalar()) + 1);
 
-            sql.con.Close();
+            sqlite.con.Close();
         }
 
         //Record Visite Rsponse
@@ -65,13 +65,13 @@ namespace SajalVaiProject
             string rspnsFP = save_response(lbl_v_id.Text, tb_v_response.Text);
             int n = 0;
 
-            sql.con.Open();
+            sqlite.con.Open();
 
-            sql.cmd.CommandText = "Insert into Visit_info values('" + lbl_v_id.Text + "','" + tb_v_company.Text + "','" + tb_v_address.Text + "','" + tb_v_phone.Text + "','" + dtp_v_date.Text + "','" + tb_v_type.Text + "','" + tb_v_visitor.Text + "','" + rspnsFP + "')";
+            sqlite.cmd.CommandText = "Insert into Visit_info values('" + lbl_v_id.Text + "','" + tb_v_company.Text + "','" + tb_v_address.Text + "','" + tb_v_phone.Text + "','" + dtp_v_date.Text + "','" + tb_v_type.Text + "','" + tb_v_visitor.Text + "','" + rspnsFP + "')";
 
-            n = sql.cmd.ExecuteNonQuery();
+            n = sqlite.cmd.ExecuteNonQuery();
 
-            sql.con.Close();
+            sqlite.con.Close();
 
             return n;
 
