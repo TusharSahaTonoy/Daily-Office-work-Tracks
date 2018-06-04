@@ -44,7 +44,11 @@ namespace SajalVaiProject
 
             sqlite.con.Close();
             if(a!=0)
+            {
                 MessageBox.Show("Client edited");
+                ClientList.get_obj = null;
+            }
+
             else
                 MessageBox.Show("Something wrong");
         }

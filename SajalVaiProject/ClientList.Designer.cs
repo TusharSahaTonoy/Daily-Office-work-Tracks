@@ -92,7 +92,7 @@
             this.btn_client_delete.Location = new System.Drawing.Point(212, 430);
             this.btn_client_delete.Name = "btn_client_delete";
             this.btn_client_delete.Size = new System.Drawing.Size(92, 31);
-            this.btn_client_delete.TabIndex = 1;
+            this.btn_client_delete.TabIndex = 2;
             this.btn_client_delete.Text = "Delete";
             this.btn_client_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_client_delete.UseVisualStyleBackColor = false;

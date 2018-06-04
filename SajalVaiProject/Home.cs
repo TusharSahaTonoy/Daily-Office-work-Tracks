@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Data.SQLite;
 
 namespace SajalVaiProject
 {
-
-    
 
     public partial class Home : Form
     {
@@ -66,10 +64,7 @@ namespace SajalVaiProject
             try
             {
                 sqlite.con.Open();
-
-                //sql.cmd.CommandText = "Select * from Client_info";
-                //sql.cmd.ExecuteNonQuery();
-
+                
                 sqlite.con.Close();
             }
             catch (Exception ex)

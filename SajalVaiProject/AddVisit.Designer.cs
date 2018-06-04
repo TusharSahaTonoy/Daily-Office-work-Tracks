@@ -59,7 +59,7 @@
             this.btn_v_save.Location = new System.Drawing.Point(658, 186);
             this.btn_v_save.Name = "btn_v_save";
             this.btn_v_save.Size = new System.Drawing.Size(95, 36);
-            this.btn_v_save.TabIndex = 0;
+            this.btn_v_save.TabIndex = 7;
             this.btn_v_save.Text = " Save";
             this.btn_v_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_v_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,7 +134,7 @@
             this.tb_v_company.Location = new System.Drawing.Point(153, 70);
             this.tb_v_company.Name = "tb_v_company";
             this.tb_v_company.Size = new System.Drawing.Size(401, 27);
-            this.tb_v_company.TabIndex = 4;
+            this.tb_v_company.TabIndex = 0;
             // 
             // tb_v_type
             // 
@@ -148,7 +148,7 @@
             this.tb_v_visitor.Location = new System.Drawing.Point(153, 290);
             this.tb_v_visitor.Name = "tb_v_visitor";
             this.tb_v_visitor.Size = new System.Drawing.Size(401, 27);
-            this.tb_v_visitor.TabIndex = 4;
+            this.tb_v_visitor.TabIndex = 5;
             // 
             // tb_v_response
             // 
@@ -157,7 +157,7 @@
             this.tb_v_response.Name = "tb_v_response";
             this.tb_v_response.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tb_v_response.Size = new System.Drawing.Size(401, 104);
-            this.tb_v_response.TabIndex = 4;
+            this.tb_v_response.TabIndex = 6;
             // 
             // dtp_v_date
             // 
@@ -165,7 +165,7 @@
             this.dtp_v_date.Location = new System.Drawing.Point(157, 202);
             this.dtp_v_date.Name = "dtp_v_date";
             this.dtp_v_date.Size = new System.Drawing.Size(118, 27);
-            this.dtp_v_date.TabIndex = 5;
+            this.dtp_v_date.TabIndex = 3;
             // 
             // label7
             // 
@@ -190,14 +190,14 @@
             this.tb_v_address.Location = new System.Drawing.Point(153, 114);
             this.tb_v_address.Name = "tb_v_address";
             this.tb_v_address.Size = new System.Drawing.Size(401, 27);
-            this.tb_v_address.TabIndex = 4;
+            this.tb_v_address.TabIndex = 1;
             // 
             // tb_v_phone
             // 
             this.tb_v_phone.Location = new System.Drawing.Point(153, 158);
             this.tb_v_phone.Name = "tb_v_phone";
             this.tb_v_phone.Size = new System.Drawing.Size(401, 27);
-            this.tb_v_phone.TabIndex = 4;
+            this.tb_v_phone.TabIndex = 2;
             this.tb_v_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_v_phone_KeyPress);
             // 
             // btn_v_cancel
@@ -210,7 +210,7 @@
             this.btn_v_cancel.Location = new System.Drawing.Point(658, 246);
             this.btn_v_cancel.Name = "btn_v_cancel";
             this.btn_v_cancel.Size = new System.Drawing.Size(95, 36);
-            this.btn_v_cancel.TabIndex = 0;
+            this.btn_v_cancel.TabIndex = 8;
             this.btn_v_cancel.Text = "Cancel";
             this.btn_v_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_v_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

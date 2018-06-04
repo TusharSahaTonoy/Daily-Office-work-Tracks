@@ -46,52 +46,51 @@
             // 
             // tb_c_tel
             // 
-            this.tb_c_tel.Location = new System.Drawing.Point(232, 358);
+            this.tb_c_tel.Location = new System.Drawing.Point(232, 357);
             this.tb_c_tel.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.tb_c_tel.MaxLength = 15;
             this.tb_c_tel.Name = "tb_c_tel";
             this.tb_c_tel.Size = new System.Drawing.Size(472, 27);
-            this.tb_c_tel.TabIndex = 23;
+            this.tb_c_tel.TabIndex = 5;
             // 
             // tb_c_address
             // 
-            this.tb_c_address.Location = new System.Drawing.Point(232, 249);
+            this.tb_c_address.Location = new System.Drawing.Point(232, 292);
             this.tb_c_address.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.tb_c_address.MaxLength = 100;
             this.tb_c_address.Multiline = true;
             this.tb_c_address.Name = "tb_c_address";
-            this.tb_c_address.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_c_address.Size = new System.Drawing.Size(472, 81);
-            this.tb_c_address.TabIndex = 24;
+            this.tb_c_address.Size = new System.Drawing.Size(472, 27);
+            this.tb_c_address.TabIndex = 4;
             // 
             // tb_c_email
             // 
-            this.tb_c_email.Location = new System.Drawing.Point(232, 137);
+            this.tb_c_email.Location = new System.Drawing.Point(232, 162);
             this.tb_c_email.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.tb_c_email.MaxLength = 100;
             this.tb_c_email.Name = "tb_c_email";
             this.tb_c_email.Size = new System.Drawing.Size(472, 27);
-            this.tb_c_email.TabIndex = 25;
+            this.tb_c_email.TabIndex = 2;
             // 
             // tb_c_company
             // 
-            this.tb_c_company.Location = new System.Drawing.Point(232, 188);
+            this.tb_c_company.Location = new System.Drawing.Point(232, 227);
             this.tb_c_company.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.tb_c_company.MaxLength = 100;
             this.tb_c_company.Multiline = true;
             this.tb_c_company.Name = "tb_c_company";
             this.tb_c_company.Size = new System.Drawing.Size(472, 27);
-            this.tb_c_company.TabIndex = 26;
+            this.tb_c_company.TabIndex = 3;
             // 
             // tb_c_phone
             // 
-            this.tb_c_phone.Location = new System.Drawing.Point(232, 86);
+            this.tb_c_phone.Location = new System.Drawing.Point(232, 97);
             this.tb_c_phone.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.tb_c_phone.MaxLength = 15;
             this.tb_c_phone.Name = "tb_c_phone";
             this.tb_c_phone.ReadOnly = true;
             this.tb_c_phone.Size = new System.Drawing.Size(472, 27);
-            this.tb_c_phone.TabIndex = 27;
+            this.tb_c_phone.TabIndex = 1;
             // 
             // tb_c_name
             // 
@@ -100,7 +99,7 @@
             this.tb_c_name.MaxLength = 50;
             this.tb_c_name.Name = "tb_c_name";
             this.tb_c_name.Size = new System.Drawing.Size(472, 27);
-            this.tb_c_name.TabIndex = 28;
+            this.tb_c_name.TabIndex = 0;
             // 
             // btn_c_save
             // 
@@ -112,7 +111,7 @@
             this.btn_c_save.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.btn_c_save.Name = "btn_c_save";
             this.btn_c_save.Size = new System.Drawing.Size(128, 31);
-            this.btn_c_save.TabIndex = 22;
+            this.btn_c_save.TabIndex = 6;
             this.btn_c_save.Text = "Save Client";
             this.btn_c_save.UseVisualStyleBackColor = false;
             this.btn_c_save.Click += new System.EventHandler(this.btn_c_save_Click);
@@ -121,7 +120,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(124, 358);
+            this.label8.Location = new System.Drawing.Point(124, 357);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 20);
@@ -132,7 +131,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(73, 263);
+            this.label6.Location = new System.Drawing.Point(73, 292);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 20);
@@ -143,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(69, 86);
+            this.label3.Location = new System.Drawing.Point(69, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 20);
@@ -154,7 +153,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(156, 137);
+            this.label7.Location = new System.Drawing.Point(156, 162);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 20);
@@ -165,7 +164,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(86, 188);
+            this.label5.Location = new System.Drawing.Point(86, 227);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
@@ -193,7 +192,7 @@
             this.btn_edit_cancel.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.btn_edit_cancel.Name = "btn_edit_cancel";
             this.btn_edit_cancel.Size = new System.Drawing.Size(128, 31);
-            this.btn_edit_cancel.TabIndex = 22;
+            this.btn_edit_cancel.TabIndex = 7;
             this.btn_edit_cancel.Text = "Back To List";
             this.btn_edit_cancel.UseVisualStyleBackColor = false;
             this.btn_edit_cancel.Click += new System.EventHandler(this.btn_edit_cancel_Click);

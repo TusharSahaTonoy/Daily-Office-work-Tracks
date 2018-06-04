@@ -182,6 +182,17 @@ namespace SajalVaiProject
             }
         }
 
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
 
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "TXT|*.txt|DOC|*.doc;*.docx|PDF|*.pdf";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Path: "+ofd.FileName+" chosen:"+ofd.FilterIndex);
+            }
+
+        }
     }
 }

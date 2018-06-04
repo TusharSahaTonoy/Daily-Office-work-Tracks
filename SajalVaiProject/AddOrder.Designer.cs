@@ -52,6 +52,9 @@
             this.tb_o_about = new System.Windows.Forms.TextBox();
             this.lbl_c_name = new System.Windows.Forms.Label();
             this.cb_c_name = new System.Windows.Forms.ComboBox();
+            this.btn_upload = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_upload_state = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_o_title
@@ -208,7 +211,6 @@
             // btn_o_save
             // 
             this.btn_o_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
-            this.btn_o_save.FlatAppearance.BorderSize = 0;
             this.btn_o_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_o_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_o_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -282,7 +284,7 @@
             this.tb_o_about.Multiline = true;
             this.tb_o_about.Name = "tb_o_about";
             this.tb_o_about.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_o_about.Size = new System.Drawing.Size(498, 91);
+            this.tb_o_about.Size = new System.Drawing.Size(358, 91);
             this.tb_o_about.TabIndex = 1;
             // 
             // lbl_c_name
@@ -308,11 +310,46 @@
             this.cb_c_name.TabIndex = 3;
             this.cb_c_name.SelectedIndexChanged += new System.EventHandler(this.cb_c_name_SelectedIndexChanged);
             // 
+            // btn_upload
+            // 
+            this.btn_upload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(27)))), ((int)(((byte)(28)))));
+            this.btn_upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_upload.Location = new System.Drawing.Point(537, 198);
+            this.btn_upload.Name = "btn_upload";
+            this.btn_upload.Size = new System.Drawing.Size(120, 29);
+            this.btn_upload.TabIndex = 6;
+            this.btn_upload.Text = "Upload File";
+            this.btn_upload.UseVisualStyleBackColor = false;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(533, 150);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "File Uploaded :";
+            // 
+            // lbl_upload_state
+            // 
+            this.lbl_upload_state.AutoSize = true;
+            this.lbl_upload_state.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_upload_state.Location = new System.Drawing.Point(641, 150);
+            this.lbl_upload_state.Name = "lbl_upload_state";
+            this.lbl_upload_state.Size = new System.Drawing.Size(29, 20);
+            this.lbl_upload_state.TabIndex = 7;
+            this.lbl_upload_state.Text = "No";
+            // 
             // AddOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.lbl_upload_state);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dtp_o_delivery);
@@ -337,6 +374,7 @@
             this.Controls.Add(this.tb_o_title);
             this.Controls.Add(this.btn_o_save);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddOrder";
             this.Size = new System.Drawing.Size(791, 483);
@@ -369,5 +407,8 @@
         private System.Windows.Forms.TextBox tb_o_about;
         private System.Windows.Forms.Label lbl_c_name;
         private System.Windows.Forms.ComboBox cb_c_name;
+        private System.Windows.Forms.Button btn_upload;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_upload_state;
     }
 }
